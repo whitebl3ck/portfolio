@@ -62,49 +62,49 @@ const cardItemVariants = {
 
 const Experience = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto px-6 py-12">
-      <h1 className="text-6xl font-bold mb-16 text-center">My Experience</h1>
+    <div className="w-full max-w-4xl mx-auto px-4 md:px-6 py-12">
+      <h1 className="text-4xl md:text-6xl font-bold mb-16 text-center">My Experience</h1>
       
       <div className="relative">
         {/* The vertical timeline line */}
-        <div className="absolute left-4 top-0 h-full w-0.5 bg-gray-200"></div>
+        <div className="absolute left-3 md:left-4 top-0 h-full w-0.5 bg-gray-200"></div>
 
         {experience.map((job, index) => (
           <motion.div
             key={index}
-            className="mb-16 pl-12 relative"
+            className="mb-12 md:mb-16 pl-10 md:pl-12 relative"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={entryVariants} // Use entry variants for the whole block
           >
             {/* The timeline dot */}
-            <div className="absolute left-4 -translate-x-1/2 top-1">
-              <div className="w-4 h-4 bg-blue-500 rounded-full"></div>
-              <div className="absolute w-4 h-4 bg-blue-500 rounded-full animate-ping"></div>
+            <div className="absolute left-3 md:left-4 -translate-x-1/2 top-1">
+              <div className="w-3 h-3 md:w-4 md:h-4 bg-blue-500 rounded-full"></div>
+              <div className="absolute w-3 h-3 md:w-4 md:h-4 bg-blue-500 rounded-full animate-ping"></div>
             </div>
             
             {/* Job Details Card */}
             <motion.div 
-              className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white p-6 md:p-8 rounded-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
               variants={cardContentContainerVariants} // Use stagger container variants
             >
-              <motion.div className="flex items-center mb-3" variants={cardItemVariants}>
-                <div className="text-3xl mr-4">{job.icon}</div>
+              <motion.div className="flex items-start mb-3" variants={cardItemVariants}>
+                <div className="text-2xl md:text-3xl mr-4">{job.icon}</div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-900">{job.role}</h3>
-                  <p className="text-lg font-semibold text-blue-600">{job.company} | {job.duration}</p>
+                  <h3 className="text-xl md:text-3xl font-bold text-gray-900">{job.role}</h3>
+                  <p className="text-md md:text-lg font-semibold text-blue-600">{job.company && `${job.company} | `}{job.duration}</p>
                 </div>
               </motion.div>
-              <motion.p className="text-base text-gray-700 mb-6" variants={cardItemVariants}>
+              <motion.p className="text-sm md:text-base text-gray-700 mb-6" variants={cardItemVariants}>
                 {job.description}
               </motion.p>
               
               <motion.div variants={cardItemVariants}>
-                <h4 className="text-md font-semibold text-gray-800 mb-3">Notable Knowledge Gained:</h4>
-                <div className="flex flex-wrap gap-3">
+                <h4 className="text-sm md:text-md font-semibold text-gray-800 mb-3">Notable Knowledge Gained:</h4>
+                <div className="flex flex-wrap gap-2">
                   {job.technologies.map(tech => (
-                    <span key={tech} className="bg-blue-100 text-blue-800 text-base font-medium px-4 py-2 rounded-full">
+                    <span key={tech} className="bg-blue-100 text-blue-800 text-xs md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full">
                       {tech}
                     </span>
                   ))}

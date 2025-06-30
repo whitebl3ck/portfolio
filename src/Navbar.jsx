@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaUserTie } from 'react-icons/fa';
+import { FaUserTie, FaBars, FaTimes } from 'react-icons/fa';
 
 const scrollToSection = (id) => {
   const section = document.getElementById(id);
@@ -10,6 +10,7 @@ const scrollToSection = (id) => {
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,25 +20,50 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = (
+    <>
+      <button className={`text-2xl px-6 py-2 font-bold ${scrolled || isMenuOpen ? 'text-white' : 'text-black'}`} onClick={() => { scrollToSection('aboutme'); setIsMenuOpen(false); }}>Introduction</button>
+      <button className={`text-2xl px-6 py-2 font-bold ${scrolled || isMenuOpen ? 'text-white' : 'text-black'}`} onClick={() => { scrollToSection('skills'); setIsMenuOpen(false); }}>Skills</button>
+      <button className={`text-2xl px-6 py-2 font-bold ${scrolled || isMenuOpen ? 'text-white' : 'text-black'}`} onClick={() => { scrollToSection('projects'); setIsMenuOpen(false); }}>Projects</button>
+      <button className={`text-2xl px-6 py-2 font-bold ${scrolled || isMenuOpen ? 'text-white' : 'text-black'}`} onClick={() => { scrollToSection('experience'); setIsMenuOpen(false); }}>Experience</button>
+      <button className={`text-2xl px-6 py-2 font-bold ${scrolled || isMenuOpen ? 'text-white' : 'text-black'}`} onClick={() => { scrollToSection('contact'); setIsMenuOpen(false); }}>Contact</button>
+    </>
+  );
+
   return (
     <nav
-      className={`p-12 fixed w-full top-0 left-0 z-10 flex items-center transition-colors duration-300 ${
+      className={`p-6 md:p-12 fixed w-full top-0 left-0 z-20 flex items-center justify-between transition-colors duration-300 ${
         scrolled ? 'bg-black' : 'bg-stone-500'
       }`}
-      style={{ minHeight: '140px' }}
+      style={{ minHeight: '100px' }}
     >
-      <div className="flex-1 flex items-center">
+      {/* Brand */}
+      <div className="flex items-center">
         <FaUserTie className={`text-3xl mr-4 ${scrolled ? 'text-white' : 'text-black'}`} />
-        <span className={`font-bold text-4xl ${scrolled ? 'text-white' : 'text-black'}`}>Opara Chukwuemeka</span>
+        <span className={`font-bold text-2xl md:text-4xl ${scrolled ? 'text-white' : 'text-black'}`}>Opara Chukwuemeka</span>
       </div>
-      <div className="flex-1 flex justify-center items-center gap-12">
-        <button className={`text-2xl px-6 py-2 font-bold ${scrolled ? 'text-white' : 'text-black'}`} onClick={() => scrollToSection('aboutme')}>Introduction</button>
-        <button className={`text-2xl px-6 py-2 font-bold ${scrolled ? 'text-white' : 'text-black'}`} onClick={() => scrollToSection('skills')}>Skills</button>
-        <button className={`text-2xl px-6 py-2 font-bold ${scrolled ? 'text-white' : 'text-black'}`} onClick={() => scrollToSection('projects')}>Projects</button>
-        <button className={`text-2xl px-6 py-2 font-bold ${scrolled ? 'text-white' : 'text-black'}`} onClick={() => scrollToSection('experience')}>Experience</button>
-        <button className={`text-2xl px-6 py-2 font-bold ${scrolled ? 'text-white' : 'text-black'}`} onClick={() => scrollToSection('contact')}>Contact</button>
+
+      {/* Desktop Menu */}
+      <div className="hidden md:flex flex-1 justify-center items-center gap-12">
+        {navLinks}
       </div>
-      <div className="flex-1"></div>
+
+      {/* Hamburger Icon */}
+      <div className="md:hidden flex items-center">
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-3xl text-white">
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+      
+      {/* Spacer for desktop to balance the layout */}
+      <div className="hidden md:flex flex-1"></div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 w-full bg-black flex flex-col items-center gap-6 py-8">
+          {navLinks}
+        </div>
+      )}
     </nav>
   );
 };
