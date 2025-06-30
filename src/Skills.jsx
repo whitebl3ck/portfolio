@@ -71,7 +71,7 @@ const cardVariants = {
 };
 
 const Skills = () => (
-  <div className="w-full max-w-7xl mx-auto p-2 sm:p-4 md:p-12">
+  <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 md:p-12">
     <h1 className="text-3xl md:text-5xl font-bold mb-12 text-center">My Skills</h1>
     
     <div className="flex flex-col lg:flex-row gap-12">
@@ -81,18 +81,18 @@ const Skills = () => (
         {technicalSkills.map((group) => (
           <div key={group.group} className="mb-6">
             <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md w-24 h-24 flex flex-col items-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-20 h-20 sm:w-24 sm:h-24 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <div className="text-4xl mb-2">{skill.icon()}</div>
-                  <span className="text-sm font-semibold text-center">{skill.name}</span>
+                  <div className="text-2xl sm:text-3xl mb-1">{skill.icon()}</div>
+                  <span className="text-xs text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
@@ -106,18 +106,18 @@ const Skills = () => (
         {softSkills.map((group) => (
           <div key={group.group} className="mb-6">
             <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md w-24 h-24 flex flex-col justify-center items-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-20 h-20 sm:w-24 sm:h-24 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <div className="text-4xl mb-2">{skill.icon()}</div>
-                  <span className="text-sm font-semibold text-center">{skill.name}</span>
+                  <div className="text-2xl sm:text-3xl mb-1">{skill.icon()}</div>
+                  <span className="text-xs text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
