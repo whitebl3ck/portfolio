@@ -57,10 +57,10 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <div className="w-full mx-auto px-25">
+    <div className="w-full mx-auto px-4 sm:px-12">
       <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">My Projects</h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
@@ -71,13 +71,12 @@ const Projects = () => {
             variants={cardVariants}
           >
             {/* Project Image */}
-            <div className="relative h-48">
-      
-              <div className="absolute inset-0 bg-blue-600 bg-opacity-20"><img 
+            <div className="relative h-32 sm:h-48 bg-gray-800">
+              <img 
                 src={project.image} 
                 alt={project.title}
                 className="w-full h-full object-cover"
-              /></div>
+              />
               <span className={`absolute top-2 right-2 px-3 py-1 text-sm font-semibold text-white rounded-full ${
                 project.status === 'Completed' ? 'bg-green-500' : 'bg-yellow-500'
               }`}>
@@ -86,13 +85,13 @@ const Projects = () => {
             </div>
             
             {/* Project Content */}
-            <div className="p-6">
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">{project.title}</h3>
-              <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+            <div className="p-4 sm:p-6">
+              <h3 className="text-base sm:text-xl font-bold mb-2 text-gray-800">{project.title}</h3>
+              <p className="text-xs sm:text-sm text-gray-600 mb-4 leading-relaxed">{project.description}</p>
               
               {/* Technologies */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-700 mb-2">Technologies Used:</h4>
+              <div className="mb-4">
+                <h4 className="text-xs sm:text-sm font-semibold text-gray-700 mb-2">Technologies Used:</h4>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span 
@@ -107,12 +106,12 @@ const Projects = () => {
               </div>
               
               {/* Project Links */}
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-2 mt-auto">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 text-sm sm:text-base bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                  className="w-full flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
                 >
                   <FaGithub />
                   GitHub
@@ -121,7 +120,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-3 py-2 text-sm sm:text-base bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-200"
+                  className="w-full flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-200"
                 >
                   <FaExternalLinkAlt />
                   Live Demo

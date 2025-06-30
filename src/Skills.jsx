@@ -85,14 +85,14 @@ const Skills = () => (
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md p-3 flex flex-col items-center w-24 h-24 sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-20 h-20 sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <div className="text-3xl sm:text-4xl mb-2">{skill.icon()}</div>
-                  <span className="text-xs sm:text-sm font-semibold text-center">{skill.name}</span>
+                  <div className="text-2xl sm:text-3xl mb-1">{skill.icon()}</div>
+                  <span className="text-xs text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
@@ -110,14 +110,14 @@ const Skills = () => (
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md p-3 flex flex-col items-center w-24 h-24 sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-20 h-20 sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <div className="text-3xl sm:text-4xl mb-2">{skill.icon()}</div>
-                  <span className="text-xs sm:text-sm font-semibold text-center">{skill.name}</span>
+                  <div className="text-2xl sm:text-3xl mb-1">{skill.icon()}</div>
+                  <span className="text-xs text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
