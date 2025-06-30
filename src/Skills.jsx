@@ -81,11 +81,11 @@ const Skills = () => (
         {technicalSkills.map((group) => (
           <div key={group.group} className="mb-6">
             <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
-            <div className="grid grid-cols-3 gap-2 sm:gap-1">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white sm:w-5xl rounded-lg shadow-md p-2 flex flex-col items-center justify-center aspect-square cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white sm:w-4xl rounded-lg shadow-md p-2 flex flex-col items-center justify-center aspect-square cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
@@ -106,7 +106,7 @@ const Skills = () => (
         {softSkills.map((group) => (
           <div key={group.group} className="mb-6">
             <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
-            <div className="grid grid-cols-3 gap-2 sm:gap-1">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
