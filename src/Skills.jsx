@@ -71,7 +71,7 @@ const cardVariants = {
 };
 
 const Skills = () => (
-  <div className="w-full max-w-7xl mx-auto p-6 md:p-12">
+  <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 md:p-12">
     <h1 className="text-3xl md:text-5xl font-bold mb-12 text-center">My Skills</h1>
     
     <div className="flex flex-col lg:flex-row gap-12">
@@ -85,7 +85,7 @@ const Skills = () => (
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-20 h-20 sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-[85px] h-[85px] sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
@@ -110,7 +110,7 @@ const Skills = () => (
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-20 h-20 sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-2 flex flex-col items-center w-[85px] h-[85px] sm:w-28 sm:h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
