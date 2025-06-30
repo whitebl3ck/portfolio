@@ -74,7 +74,7 @@ const Skills = () => (
   <div className="w-full max-w-7xl mx-auto p-2 sm:p-6 md:p-12">
     <h1 className="text-3xl md:text-5xl font-bold mb-12 text-center">My Skills</h1>
     
-    <div className="flex flex-col lg:flex-row gap-12">
+    <div className="flex flex-col lg:flex-row gap-12 sm:px-8">
       {/* Technical Skills - Left Side */}
       <div className="flex-1">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center lg:text-left">Technical Skills</h2>
