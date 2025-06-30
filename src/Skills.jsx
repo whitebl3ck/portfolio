@@ -81,7 +81,7 @@ const Skills = () => (
         {technicalSkills.map((group) => (
           <div key={group.group} className="mb-6">
             <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 sm:gap-1">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
