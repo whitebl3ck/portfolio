@@ -72,27 +72,27 @@ const cardVariants = {
 
 const Skills = () => (
   <div className="w-full max-w-7xl mx-auto p-6 md:p-12">
-    <h1 className="text-4xl md:text-6xl font-bold mb-16 text-center">My Skills</h1>
+    <h1 className="text-3xl md:text-5xl font-bold mb-12 text-center">My Skills</h1>
     
-    <div className="flex flex-col lg:flex-row gap-16">
+    <div className="flex flex-col lg:flex-row gap-12">
       {/* Technical Skills - Left Side */}
       <div className="flex-1">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center lg:text-left">Technical Skills</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center lg:text-left">Technical Skills</h2>
         {technicalSkills.map((group) => (
-          <div key={group.group} className="mb-8">
-            <h3 className="text-2xl font-semibold mb-6">{group.group}</h3>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <div key={group.group} className="mb-6">
+            <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center w-32 h-32 justify-center cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-3 flex flex-col items-center w-28 h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <div className="text-4xl mb-2">{skill.icon()}</div>
-                  <span className="text-base font-semibold text-center">{skill.name}</span>
+                  <div className="text-3xl mb-2">{skill.icon()}</div>
+                  <span className="text-sm font-semibold text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
@@ -102,22 +102,22 @@ const Skills = () => (
 
       {/* Soft Skills - Right Side */}
       <div className="flex-1">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center lg:text-left">Soft Skills</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center lg:text-left">Soft Skills</h2>
         {softSkills.map((group) => (
-          <div key={group.group} className="mb-8">
-            <h3 className="text-2xl font-semibold mb-6">{group.group}</h3>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <div key={group.group} className="mb-6">
+            <h3 className="text-xl font-semibold mb-4">{group.group}</h3>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center w-32 h-32 justify-center cursor-pointer hover:scale-105 hover:shadow-2xl transition-transform"
+                  className="bg-white rounded-lg shadow-md p-3 flex flex-col items-center w-28 h-28 justify-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
                 >
-                  <div className="text-4xl mb-2">{skill.icon()}</div>
-                  <span className="text-base font-semibold text-center">{skill.name}</span>
+                  <div className="text-3xl mb-2">{skill.icon()}</div>
+                  <span className="text-sm font-semibold text-center">{skill.name}</span>
                 </motion.div>
               ))}
             </div>

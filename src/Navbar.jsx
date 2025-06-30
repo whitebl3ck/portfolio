@@ -32,19 +32,19 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`p-6 md:p-12 fixed w-full top-0 left-0 z-20 flex items-center justify-between transition-colors duration-300 ${
+      className={`p-4 md:p-8 fixed w-full top-0 left-0 z-20 flex items-center justify-between transition-colors duration-300 ${
         scrolled ? 'bg-black' : 'bg-stone-500'
       }`}
-      style={{ minHeight: '100px' }}
+      style={{ minHeight: '80px' }}
     >
       {/* Brand */}
       <div className="flex items-center">
-        <FaUserTie className={`text-3xl mr-4 ${scrolled ? 'text-white' : 'text-black'}`} />
-        <span className={`font-bold text-2xl md:text-4xl ${scrolled ? 'text-white' : 'text-black'}`}>Opara Chukwuemeka</span>
+        <FaUserTie className={`text-2xl md:text-3xl mr-4 ${scrolled ? 'text-white' : 'text-black'}`} />
+        <span className={`font-bold text-xl md:text-3xl ${scrolled ? 'text-white' : 'text-black'}`}>Opara Chukwuemeka</span>
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex flex-1 justify-center items-center gap-12">
+      <div className="hidden md:flex flex-1 justify-center items-center gap-8">
         {navLinks}
       </div>
 

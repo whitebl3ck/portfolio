@@ -54,13 +54,13 @@ const AboutMe = () => {
       
       {/* Text Content Container */}
       <div className="w-full md:w-2/3 flex items-center justify-center">
-        <div className='text-gray-300 p-8 relative'>
+        <div className='text-gray-300 p-6 md:p-8 relative'>
           {/* Top-left border */}
-          <div className="absolute top-0 left-0 w-12 h-12 md:w-16 md:h-16 border-t-4 md:border-t-8 border-l-4 md:border-l-8 border-black"></div>
+          <div className="absolute top-0 left-0 w-10 h-10 md:w-12 md:h-12 border-t-4 md:border-t-8 border-l-4 md:border-l-8 border-black"></div>
           {/* Bottom-right border */}
-          <div className="absolute bottom-0 right-0 w-12 h-12 md:w-16 md:h-16 border-b-4 md:border-b-8 border-r-4 md:border-r-8 border-black"></div>
+          <div className="absolute bottom-0 right-0 w-10 h-10 md:w-12 md:h-12 border-b-4 md:border-b-8 border-r-4 md:border-r-8 border-black"></div>
           <motion.h1 
-            className="text-5xl md:text-8xl font-bold mb-4 relative"
+            className="text-4xl md:text-7xl font-bold mb-4 relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -69,10 +69,10 @@ const AboutMe = () => {
             <motion.span
               animate={{ opacity: [1, 0] }}
               transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-              className="inline-block w-1 md:w-2 h-12 md:h-20 bg-gray-300 ml-2"
+              className="inline-block w-1 md:w-2 h-10 md:h-16 bg-gray-300 ml-2"
             />
           </motion.h1>
-          <p className={`text-xl md:text-4xl max-w-4xl relative transition-opacity duration-500 leading-relaxed ${fade ? 'opacity-100' : 'opacity-0'}`} dangerouslySetInnerHTML={{ __html: paragraphs[index] }} />
+          <p className={`text-lg md:text-2xl max-w-4xl relative transition-opacity duration-500 leading-relaxed ${fade ? 'opacity-100' : 'opacity-0'}`} dangerouslySetInnerHTML={{ __html: paragraphs[index] }} />
         </div>
       </div>
     </div>

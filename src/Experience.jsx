@@ -63,7 +63,7 @@ const cardItemVariants = {
 const Experience = () => {
   return (
     <div className="w-full max-w-4xl mx-auto px-4 md:px-6 py-12">
-      <h1 className="text-4xl md:text-6xl font-bold mb-16 text-center">My Experience</h1>
+      <h1 className="text-3xl md:text-5xl font-bold mb-16 text-center">My Experience</h1>
       
       <div className="relative">
         {/* The vertical timeline line */}
@@ -92,19 +92,19 @@ const Experience = () => {
               <motion.div className="flex items-start mb-3" variants={cardItemVariants}>
                 <div className="text-2xl md:text-3xl mr-4">{job.icon}</div>
                 <div>
-                  <h3 className="text-xl md:text-3xl font-bold text-gray-900">{job.role}</h3>
-                  <p className="text-md md:text-lg font-semibold text-blue-600">{job.company && `${job.company} | `}{job.duration}</p>
+                  <h3 className="text-lg md:text-2xl font-bold text-gray-900">{job.role}</h3>
+                  <p className="text-sm md:text-base font-semibold text-blue-600">{job.company && `${job.company} | `}{job.duration}</p>
                 </div>
               </motion.div>
-              <motion.p className="text-sm md:text-base text-gray-700 mb-6" variants={cardItemVariants}>
+              <motion.p className="text-sm text-gray-700 mb-6" variants={cardItemVariants}>
                 {job.description}
               </motion.p>
               
               <motion.div variants={cardItemVariants}>
-                <h4 className="text-sm md:text-md font-semibold text-gray-800 mb-3">Notable Knowledge Gained:</h4>
+                <h4 className="text-xs md:text-sm font-semibold text-gray-800 mb-3">Notable Knowledge Gained:</h4>
                 <div className="flex flex-wrap gap-2">
                   {job.technologies.map(tech => (
-                    <span key={tech} className="bg-blue-100 text-blue-800 text-xs md:text-base font-medium px-3 py-1 md:px-4 md:py-2 rounded-full">
+                    <span key={tech} className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
                       {tech}
                     </span>
                   ))}
