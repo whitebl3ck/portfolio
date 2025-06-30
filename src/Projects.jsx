@@ -87,8 +87,8 @@ const Projects = () => {
             
             {/* Project Content */}
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-3 text-gray-800">{project.title}</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-gray-800">{project.title}</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">{project.description}</p>
               
               {/* Technologies */}
               <div className="mb-6">
@@ -97,7 +97,7 @@ const Projects = () => {
                   {project.technologies.map((tech) => (
                     <span 
                       key={tech}
-                      className="flex items-center gap-1 px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-700"
+                      className="flex items-center gap-1 px-2 py-1 text-xs sm:text-sm bg-gray-100 rounded-full font-medium text-gray-700"
                     >
                       {getTechnologyIcon(tech)}
                       {tech}
@@ -112,7 +112,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
+                  className="flex items-center gap-2 px-3 py-2 text-sm sm:text-base bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200"
                 >
                   <FaGithub />
                   GitHub
@@ -121,7 +121,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-200"
+                  className="flex items-center gap-2 px-3 py-2 text-sm sm:text-base bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-200"
                 >
                   <FaExternalLinkAlt />
                   Live Demo

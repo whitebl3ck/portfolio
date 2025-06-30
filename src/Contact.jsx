@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto px-6 py-16 text-white">
-      <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center">Get in Touch</h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 text-center">Get in Touch</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Contact Information */}
@@ -40,21 +40,21 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Contact Information</h2>
-          <p className="text-stone-300 leading-relaxed">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Contact Information</h2>
+          <p className="text-sm sm:text-base text-stone-300 leading-relaxed">
             I'm currently available for freelance work and open to discussing new projects. Feel free to reach out to me through any of the following channels.
           </p>
           <div className="space-y-4">
-            <a href="mailto:vopara32@gmail.com" className="flex items-center gap-4 text-base md:text-lg hover:text-stone-300 transition-colors">
-              <FaEnvelope className="text-xl md:text-2xl" />
+            <a href="mailto:vopara32@gmail.com" className="flex items-center gap-4 text-sm sm:text-base md:text-lg hover:text-stone-300 transition-colors">
+              <FaEnvelope className="text-lg sm:text-xl md:text-2xl" />
               <span>vopara32@gmail.com</span>
             </a>
-            <div className="flex items-center gap-4 text-base md:text-lg">
-              <FaPhone className="text-xl md:text-2xl" />
+            <div className="flex items-center gap-4 text-sm sm:text-base md:text-lg">
+              <FaPhone className="text-lg sm:text-xl md:text-2xl" />
               <span>+234 704 459 4220</span>
             </div>
-            <div className="flex items-center gap-4 text-base md:text-lg">
-              <FaMapMarkerAlt className="text-xl md:text-2xl" />
+            <div className="flex items-center gap-4 text-sm sm:text-base md:text-lg">
+              <FaMapMarkerAlt className="text-lg sm:text-xl md:text-2xl" />
               <span>Lagos, Nigeria</span>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Contact = () => {
         <motion.form 
           ref={form}
           onSubmit={sendEmail}
-          className="space-y-6"
+          className="space-y-4"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

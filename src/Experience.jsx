@@ -90,13 +90,13 @@ const Experience = () => {
               variants={cardContentContainerVariants} // Use stagger container variants
             >
               <motion.div className="flex items-start mb-3" variants={cardItemVariants}>
-                <div className="text-2xl md:text-3xl mr-4">{job.icon}</div>
+                <div className="text-xl sm:text-2xl md:text-3xl mr-4">{job.icon}</div>
                 <div>
-                  <h3 className="text-lg md:text-2xl font-bold text-gray-900">{job.role}</h3>
-                  <p className="text-sm md:text-base font-semibold text-blue-600">{job.company && `${job.company} | `}{job.duration}</p>
+                  <h3 className="text-base sm:text-lg md:text-2xl font-bold text-gray-900">{job.role}</h3>
+                  <p className="text-xs sm:text-sm md:text-base font-semibold text-blue-600">{job.company && `${job.company} | `}{job.duration}</p>
                 </div>
               </motion.div>
-              <motion.p className="text-sm text-gray-700 mb-6" variants={cardItemVariants}>
+              <motion.p className="text-xs sm:text-sm text-gray-700 mb-6" variants={cardItemVariants}>
                 {job.description}
               </motion.p>
               
