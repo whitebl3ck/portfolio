@@ -28,14 +28,14 @@ const AboutMe = () => {
   }, []);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setFade(false), 4500);
+    const timeout = setTimeout(() => setFade(false), 14500);
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % paragraphs.length);
         setFade(true);
       }, 500);
-    }, 5000);
+    }, 15000);
     return () => {
       clearInterval(interval);
       clearTimeout(timeout);
