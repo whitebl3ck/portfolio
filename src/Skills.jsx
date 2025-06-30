@@ -85,7 +85,7 @@ const Skills = () => (
               {group.items.map((skill, idx) => (
                 <motion.div
                   key={skill.name}
-                  className="bg-white rounded-lg shadow-md w-24 h-24 flex flex-col justify-center items-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
+                  className="bg-white rounded-lg shadow-md w-24 h-24 flex flex-col items-center cursor-pointer hover:scale-105 hover:shadow-xl transition-transform"
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0.2 }}
