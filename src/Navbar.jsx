@@ -52,7 +52,7 @@ const Navbar = () => {
       {/* Brand */}
       <div className="flex items-center">
         <FaUserTie className={`text-2xl md:text-3xl mr-3 sm:mr-4 ${scrolled ? 'text-white' : 'text-black'}`} />
-        <span className={`font-bold text-lg sm:text-xl md:text-3xl ${scrolled ? 'text-white' : 'text-black'}`}>Opara Chukwuemeka</span>
+        <span className={`font-bold text-lg sm:text-xl md:text-3xl pr-30 ${scrolled ? 'text-white' : 'text-black'}`}>Opara Chukwuemeka</span>
       </div>
 
       {/* Desktop Menu */}
