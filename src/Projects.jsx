@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaDatabase, FaCss3Alt, 
 import { SiTailwindcss, SiMongodb, SiExpress } from 'react-icons/si';
 import digitalClockImg from './assets/digital-clock.png';
 import WeatherImg from './assets/weather.png';
-import EmanImg from './assets/Eman.png'
+import PortImg from './assets/Portfolio.png'
 const projects = [
   {
     title: "Digital Clock",
@@ -25,13 +25,13 @@ const projects = [
     status: "Completed"
   },
   {
-    title: "Event Management System",
-    description: "A comprehensive event management system for creating, managing, and promoting events. Features include user authentication, event creation, ticket booking, and an admin dashboard.",
-    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    github: "https://github.com/whitebl3ck/eman/",
-    live: "https://eman-frontend.onrender.com",
-    image: EmanImg,
-    status: "In Progress"
+    title: "Portfolio Website",
+    description: "This is my personal portfolio website, built to showcase my projects, skills, and experience. It features a modern responsive design, smooth animations, and is built with React and Tailwind CSS.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/whitebl3ck/portfolio", // Update with your actual repo if different
+    live: "https://portfolio-phi-ten-642nxst4k9.vercel.app/", // Update with your actual live link if different
+    image: PortImg, // Optionally update with a screenshot of your portfolio
+    status: "Completed"
   },
   
 ];
