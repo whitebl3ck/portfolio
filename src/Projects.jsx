@@ -28,8 +28,8 @@ const projects = [
     title: "Event Management System",
     description: "A comprehensive event management system for creating, managing, and promoting events. Features include user authentication, event creation, ticket booking, and an admin dashboard.",
     technologies: ["React", "Node.js", "Express.js", "MongoDB", "Mongoose", "Tailwind CSS"],
-    github: "https://github.com/whitebl3ck/Emanfront",
-    live: "https://emanfront.vercel.app/",
+    github: "https://github.com/whitebl3ck/eman/",
+    live: "https://eman-frontend.onrender.com",
     image: EmanImg,
     status: "In Progress"
   },
