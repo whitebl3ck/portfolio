@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Grad from './assets/grad'; // Ensure you have an image at this path or update the path accordingly
+import Grad from './assets/grad.jpg'; // Ensure you have an image at this path or update the path accordingly
 
 const paragraphs = [
   "I'm a passionate and results-driven <b>Software Engineering</b> graduate from <b>Babcock University</b>, where I graduated with a CGPA of <b>4.41</b>. With a strong foundation in computer science principles and real-world development experience, I've grown into a <b>frontend</b> and an aspiring<b>fullstack web developer</b> who is constantly exploring new ways to build impactful, user-friendly solutions.",
@@ -54,7 +54,7 @@ const AboutMe = () => {
           <img 
             src={image} 
             alt={"Victor's Graduation"}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-fill rounded-full shadow-lg"
               />
         </div>
       </div>
