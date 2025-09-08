@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Grad from './assets/grad.jpg'; // Ensure you have an image at this path or update the path accordingly
+import grad from './assets/grad.jpg'; // Ensure you have an image at this path or update the path accordingly
 
 const paragraphs = [
   "I'm a passionate and results-driven <b>Software Engineering</b> graduate from <b>Babcock University</b>, where I graduated with a CGPA of <b>4.41</b>. With a strong foundation in computer science principles and real-world development experience, I've grown into a <b>frontend</b> and an aspiring<b>fullstack web developer</b> who is constantly exploring new ways to build impactful, user-friendly solutions.",
   "I love to <b>create</b> — whether it's designing intuitive interfaces, developing scalable web applications, or bringing fresh ideas to life through code. What drives me most is the need to <b>solve</b> real problems for real people. I believe technology should be practical, beautiful, and above all, <b>helpful</b>. My focus is always on delivering tangible value through the <b>solutions</b> I build.",
-  "Beyond code, I'm someone whose life is centered on faith and purpose. I love God deeply, and I draw strength and inspiration from my values every day. In my free time, you'll often find me on the football pitch, enjoying the beautiful game and staying active."
+  "Beyond code, I am someone whose life is centered on faith and purpose. I love God deeply, and I draw strength and inspiration from my values every day. In my free time, you'll often find me on the football pitch, enjoying the beautiful game and staying active."
 ];
 
-const image = Grad; // Replace with your actual image path
+const image = grad; // Update with the path to your image
 
 const AboutMe = () => {
   const [index, setIndex] = useState(0);
